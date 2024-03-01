@@ -216,30 +216,60 @@ const AddMenuForm = () => {
 
               {form.getValues("additional") ? (
                 <div className=" flex w-full justify-between gap-2">
-                  {additionalSizes.map((data) => (
-                    <Card
-                      className="flex flex-col items-center justify-between p-4"
-                      key={data.value}
-                    >
-                      //@ts-ignore
-                      <FormField
-                        control={form.control}
-                        name={data.value}
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{data.label}</FormLabel>
-                            <FormControl>
-                              <Input placeholder="&#8369; 0.00" {...field} />
-                            </FormControl>
-                            <FormDescription>
-                              Additional price for {data.label}.
-                            </FormDescription>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </Card>
-                  ))}
+                  <Card className="flex flex-col items-center justify-between p-4">
+                    <FormField
+                      control={form.control}
+                      name="small"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Small</FormLabel>
+                          <FormControl>
+                            <Input placeholder="&#8369; 0.00" {...field} />
+                          </FormControl>
+                          <FormDescription>
+                            Additional price for Small.
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </Card>
+                  <Card className="flex flex-col items-center justify-between p-4">
+                    <FormField
+                      control={form.control}
+                      name="medium"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Medium</FormLabel>
+                          <FormControl>
+                            <Input placeholder="&#8369; 0.00" {...field} />
+                          </FormControl>
+                          <FormDescription>
+                            Additional price for Medium.
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </Card>
+                  <Card className="flex flex-col items-center justify-between p-4">
+                    <FormField
+                      control={form.control}
+                      name="large"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Large</FormLabel>
+                          <FormControl>
+                            <Input placeholder="&#8369; 0.00" {...field} />
+                          </FormControl>
+                          <FormDescription>
+                            Additional price for Large.
+                          </FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </Card>
                 </div>
               ) : (
                 ""
