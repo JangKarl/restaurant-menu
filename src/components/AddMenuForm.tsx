@@ -221,6 +221,7 @@ const AddMenuForm = () => {
                       className="flex flex-col items-center justify-between p-4"
                       key={data.value}
                     >
+                      //@ts-ignore
                       <FormField
                         control={form.control}
                         name={data.value}

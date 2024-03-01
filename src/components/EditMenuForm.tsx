@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Button } from "./ui/button";
-import { FileSliders, Pencil, RotateCw, X } from "lucide-react";
+import { Pencil, RotateCw } from "lucide-react";
 import type { FormData } from "@/lib/types";
 import {
   Select,
@@ -35,8 +35,6 @@ import { Input } from "./ui/input";
 import { Switch } from "./ui/switch";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "./ui/use-toast";
-import { db } from "../../firebase";
-import { ref, update } from "firebase/database";
 import { editMenuItem } from "@/function/firebaseFunctions";
 import {
   Tooltip,
@@ -237,6 +235,7 @@ const EditMenuForm = ({ menuItem }: EditMenuFormProps) => {
                       className="flex flex-col items-center justify-between p-4"
                       key={data.value}
                     >
+                      //@ts-ignore
                       <FormField
                         control={form.control}
                         name={data.value}
