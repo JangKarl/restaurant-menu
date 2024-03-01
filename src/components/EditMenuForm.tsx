@@ -118,7 +118,7 @@ const EditMenuForm = ({ menuItem }: EditMenuFormProps) => {
         <DialogHeader>
           <DialogTitle>Edit Menu</DialogTitle>
           <DialogDescription>
-            Fill in the details for "{editedMenuItem.name}".
+            Fill in the details for &quot;{editedMenuItem.name}&quot;.
           </DialogDescription>
         </DialogHeader>
         <div className="h-full">

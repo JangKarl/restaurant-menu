@@ -90,7 +90,7 @@ const DeleteMenu = ({ menuItem }: DeleteMenuFormProps) => {
         <DialogHeader>
           <DialogTitle>Delete Menu</DialogTitle>
           <DialogDescription>
-            Deleting "{deleteMenuItem.name}".
+            Deleting &quot;{deleteMenuItem.name}&quot;.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-4">
